@@ -4,7 +4,7 @@ import FormInput from "../custom_components/FormInput.js";
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from "react";
 
-export default function onboard(){
+export default function Onboard(){
     const router = useRouter();
     const [userId, setUserId] = useState(null);
 
