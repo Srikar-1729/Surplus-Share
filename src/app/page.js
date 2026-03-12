@@ -6,11 +6,13 @@ import { Merriweather,Montserrat } from "next/font/google";
 const merriweather = Merriweather({
     weight: ['900'],
     variable: '--font-merriweather',
+    subsets: ["latin"],
   });
 
   const montserrat = Montserrat({
     weight: ['400'],
     variable: '--font-montserrat',
+    subsets: ["latin"],
   });
 
 export default function Home() {
