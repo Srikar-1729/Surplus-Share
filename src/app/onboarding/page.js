@@ -83,34 +83,44 @@ export default function Onboard(){
 
     
     return(
-        <div className="w-screen h-screen flex justify-center items-center">
-            <div className="bg-white w-120 h-150 px-10 py-10 shadow-2xl flex flex-col gap-7">
-                <h1 className="text-3xl text-center">Welcome! Let's complete setting up your profile</h1>
-                <form onSubmit={handleNewAcc}>
-                    <FormInput name="Name" type="text" ></FormInput>
-                    <div className="mb-5">
-                        <label className="block text-sm font-medium text-gray-700 mb-2">
-                            Account Type
-                        </label>
-                        <select
-                            
-                            name="userType"
-                            className="border border-gray-300 rounded p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            required
-                            defaultValue="def"
-                        >
-                            <option value="def" disabled >Select your role</option>
-                            <option value="donor">Donor</option>
-                            <option value="receiver">Receiver</option>
-                        </select>
-                    </div>
-                    <FormInput name="Serving Capacity" type="text" placeholder="No.of people" ></FormInput>
-                    <FormInput name="Mobile Number" type="text" ></FormInput>
-                    <FormInput name="Address" type="text" ></FormInput>
-                    <button size="50" name="submit"  className="bg-blue-500 w-full text-white rounded text-lg" >Submit</button>
-                </form>
+       <div className="w-screen h-screen flex justify-center items-center">
+    <div className="bg-white w-120 h-150 px-10 py-10 shadow-2xl flex flex-col gap-7">
+        <h1 className="text-3xl text-center">
+            {"Welcome! Let's complete setting up your profile"}
+        </h1>
+
+        <form onSubmit={handleNewAcc}>
+            <FormInput name="Name" type="text"></FormInput>
+
+            <div className="mb-5">
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                    {"Account Type"}
+                </label>
+
+                <select
+                    name="userType"
+                    className="border border-gray-300 rounded p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    required
+                    defaultValue="def"
+                >
+                    <option value="def" disabled>{"Select your role"}</option>
+                    <option value="donor">{"Donor"}</option>
+                    <option value="receiver">{"Receiver"}</option>
+                </select>
             </div>
-        </div>
-        
-    );
+
+            <FormInput name="Serving Capacity" type="text" placeholder="No.of people"></FormInput>
+            <FormInput name="Mobile Number" type="text"></FormInput>
+            <FormInput name="Address" type="text"></FormInput>
+
+            <button
+                size="50"
+                name="submit"
+                className="bg-blue-500 w-full text-white rounded text-lg"
+            >
+                {"Submit"}
+            </button>
+        </form>
+    </div>
+</div>);
 }
